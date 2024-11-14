@@ -1,0 +1,119 @@
+/* Add a Google Font for a softer look */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?fit=crop&w=1600&q=80")
+    no-repeat center center/cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6b705c;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background: #fefae0;
+}
+
+#add-task-btn {
+  padding: 12px 20px;
+  background-color: #f4a261;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #e76f51;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9ecef;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #495057;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  background: #c7e2b3;
+}
+
+.delete-btn {
+  background: #ef476f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #d72638;
+}
+
+/* Custom Scrollbar */
+#task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.5);
+  border-radius: 8px;
+}
+
+#task-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.7);
+}
